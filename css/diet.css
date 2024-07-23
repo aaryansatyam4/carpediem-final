@@ -1,0 +1,302 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+.left {
+    display: inline-block;
+    position: absolute;
+    left: 34px;
+    top: 20px;
+    margin-top: -20px;
+   
+}
+
+.left img {
+    
+    width: 175px;
+}
+
+.right {
+    align-items: center;
+    display: block;
+    width: 33%;
+    margin: 20px 1080px;
+}
+nav{
+    flex:1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: #707070;
+}
+p{
+    color: #777777;
+}
+footer {
+    margin-top: 30px;
+    background-color: black;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3 {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content p {
+    color: white;
+    max-width: 900px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.footer-bottom {
+    background-color: black;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: white;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span {
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+.preloader{
+    background: #000 url(1483.gif)no-repeat center center;
+    background-size:10% ;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+:root {
+    --primary-color: #435fda;
+    --secondary-color: #d8415c;
+    --body-font-size: 16px;
+    --line-height: 1.5;
+    --content-width: 480px;
+    --background-color: #fff;
+    --background-color-secondary: #f8f8f9;
+    --text-color: #060914;
+    --text-color--muted: #71737f;
+    --line-color: #ededef;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --primary-color: #657bdb;
+      --primary-color--translucent: rgba(85, 106, 195, 0.3);
+      --secondary-color: #0f3396;
+      --background-color: #060913;
+      --background-color-secondary: #0f1424;
+      --text-color: #e4e4e7;
+      --text-color--muted: #838690;
+      --line-color: #303341;
+    }
+  }
+  
+  html {
+    font-size: 100%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  body {
+    font-family: "Geomanist", sans-serif;
+    font-size: var(--body-font-size);
+    line-height: var(--line-height);
+    padding: 0.5em 0.5em 2em 0.5em;
+    margin: 0;
+  }
+  
+  .wrapper {
+    max-width: var(--content-width);
+    margin: calc(var(--line-height) * 0.5em) auto 0 auto;
+  }
+  
+  .results {
+    margin-top: 0.5em;
+    text-align: center;
+  }
+  
+  .results > div {
+    margin-bottom: 0.5em;
+  }
+  
+  @media (min-width: 440px) {
+    :root {
+      --body-font-size: 18px;
+      --line-height: 1.5;
+    }
+  
+    .results {
+      margin: 2em 1em 0 2em;
+      display: flex;
+      justify-content: space-between;
+      column-gap: 1em;
+    }
+    .results > div {
+      margin-bottom: 0;
+    }
+  }
+  
+  .choose-gender {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 2em;
+  }
+  
+  .segmented-control {
+    flex: 1;
+    text-align: center;
+    line-height: 2em;
+    border: 1px solid var(--line-color);
+  }
+  
+  .segmented-control:first-child {
+    border-radius: 0.5em 0 0 0.5em;
+  }
+  
+  .segmented-control:last-child {
+    border-radius: 0 0.5em 0.5em 0;
+  }
+  
+  .results {
+    color: var(--text-color--muted);
+  }
+  
+  .results span {
+    font-weight: 500;
+    color: var(--text-color);
+  }
+  
+  /* The crazy stuff that needs to be here for the custom input styling */
+  input[type="range"] {
+    -webkit-appearance: none;
+    margin: 18px 0;
+    width: 100%;
+    transition: all 0.265ms ease-out;
+  }
+  
+  input[type="range"]:not(:last-of-type) {
+    margin-top: 0;
+    margin-bottom: 2.5em;
+  }
+  
+  input[type="range"]:focus {
+    outline: none;
+  }
+  
+  input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background: var(--line-color);
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    box-shadow: 0 0 8px 1px var(--secondary-color),
+      0 0 16px 4px var(--background-color);
+    border: 3px solid #fff;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -8px;
+  }
+  input[type="range"]:focus::-webkit-slider-runnable-track {
+    background: var(--secondary-color);
+  }
+  
+  input[type="radio"] {
+    -webkit-appearance: none;
+    display: none;
+  }
+  
+  .segmented-control input[type="radio"] + label {
+    border: 1px solid rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: pointer;
+    color: var(--text-color--muted);
+  }
+  
+  .segmented-control input[type="radio"]:checked + label {
+    background-color: var(--line-color);
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: var(--text-color);
+  }
+  
+  .segmented-control input[type="radio"]:focus + label {
+    border: 1px solid var(--secondary-color);
+  }
+  
+  .segmented-control:first-child input[type="radio"]:checked + label {
+    border-radius: 0.5em 0 0 0.5em;
+  }
+  
+  .segmented-control:last-child input[type="radio"]:checked + label {
+    border-radius: 0 0.5em 0.5em 0;
+  }
+  
+  input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: var(--line-color);
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    box-shadow: 0 0 8px 1px var(--secondary-color),
+      0 0 16px 4px var(--background-color);
+    border: 3px solid #fff;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -8px;
+  }

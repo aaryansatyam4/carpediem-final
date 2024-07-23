@@ -1,0 +1,219 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL PRODUCTS - BEAST</title>
+    <link rel="stylesheet" href="../css/product.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,200&family=Roboto+Mono:wght@300&family=Sofia+Sans:wght@1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Josefin+Sans:ital,wght@1,200&family=Roboto+Mono:wght@300&family=Sofia+Sans:wght@1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Josefin+Sans:ital,wght@1,200&family=Roboto+Mono:wght@300&family=Sofia+Sans:wght@1&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <div class="preloader" id="preloader"></div>
+<div class="header">
+    <div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <img src="../pics/BEAST(1).png" alt="" width="175px">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../php/carpediem.php">HOME</a></li>
+                <li><a href="#featured">PRODUCT</a></li>
+                <li><a href="#footer">CONTACT</a></li>
+                <li>
+                  <div class="cart">
+                    <a href="../html/cart.html">
+                        <i class="bx bx-cart"></i> CART
+                        <span id="cartItemCount">0</span>
+                    </a>
+                </div>
+            </ul>
+        </nav>
+        <div class="cart">
+        
+    </div>
+    </div>
+    
+</div>
+</div>
+
+<!-----  single product details -------->
+<div class="small-container single-product">
+    <div class="row">
+        <div class="cl-2  ">
+            <img src="../pics/CRICKET 1.jpg" width="150%" alt="">
+
+
+        </div>
+        <div class="cl-2">
+            <h1>Cricket White Kit</h1>
+            <h4>RS 1699</h4>
+            <select name="" id="">
+                <option>Select Size</option>
+                <option>XXL</option>
+                <option>XL</option>
+                <option>L</option>
+                <option>M</option>
+                <option>S</option>
+            </select>
+            <input type="number" value="1">
+            <a href="#" class="btn" id="addToCartBtn">Add To Cart</a>
+            <h3>Product Details</h3>
+            <p>The BEAST Cricket Whites stand as a symbol of cricket's legacy while integrating the latest advancements in fabric technology. Whether for professional players or enthusiasts, these whites offer the perfect balance between tradition, comfort, and performance, ensuring players can excel in the timeless spirit of the sport.
+            </p>
+
+        </div>
+    </div>
+</div>
+
+<div class="small-container">
+    <div class="row row-2">
+        <h2>Related Product</h2>
+        <p>View More</p>
+    </div>
+</div>
+<div class="small-container" data-aos="fade-right">
+    
+    <div class="row" id="featured">
+        <div class="cl-3" >
+            <a href="../html/soccerkit.html">
+            <img src="../pics/Soccer_Jersey_Kit_Mockup_Front.jpg" alt="">
+            <h4>Soccer Kit</h4>
+            <p> Rs 3500</p>
+        </a>
+
+        </div>
+        <div class="cl-3">
+            <a href="../html/cricket-jersey.html">
+              <img src="../pics/CRICKET 2.jpg" alt="">
+            <h4>Cricket Jersey</h4>
+            <p> Rs 1299 </p>
+        </a>
+
+        </div>
+        <div class="cl-3">
+            <a href="../html/athletic-kit.html">
+            <img src="../pics/jersey_front_longsleeve.jpg" alt="">
+            <h4>Athletic Kit</h4>
+            <p> Rs 4500</p>
+        </a>
+        </div>
+    </div>
+
+
+    
+
+    
+
+
+</div>
+
+
+<!-- Before </body> tag in your common footer or included script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      // Function to update the cart item count display
+      function updateCartItemCount() {
+          // Get the cart items from localStorage
+          const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+          // Get the element where you want to display the item count
+          const cartItemCountElement = document.getElementById('cartItemCount');
+
+          // Calculate the total quantity of items in the cart
+          const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
+
+          // Update the displayed item count
+          cartItemCountElement.textContent = totalItems;
+      }
+
+      // Function to handle adding an item to the cart
+      function addToCart(productName, productPrice) {
+          // Check if the cart data exists in localStorage
+          let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+          // Check if the product is already in the cart
+          const existingProductIndex = cartItems.findIndex(item => item.name === productName);
+
+          if (existingProductIndex !== -1) {
+              // If the product is already in the cart, update the quantity
+              cartItems[existingProductIndex].quantity += 1;
+          } else {
+              // If the product is not in the cart, add a new item
+              const cartItem = {
+                  name: productName,
+                  price: productPrice,
+                  quantity: 1,
+              };
+              cartItems.push(cartItem);
+          }
+
+          // Save the updated cart data back to localStorage
+          localStorage.setItem('cart', JSON.stringify(cartItems));
+
+          // Update the cart item count display
+          updateCartItemCount();
+
+          // You can update the UI or perform other actions as needed
+          console.log('Item added to cart:', cartItems);
+      }
+
+      // Attach the event listener to the "Add to Cart" button
+      const addToCartBtn = document.getElementById('addToCartBtn');
+      if (addToCartBtn) {
+          addToCartBtn.addEventListener('click', function (event) {
+              event.preventDefault(); // Prevent the default behavior of the anchor tag
+
+              // Replace these sample values with actual product details from your page
+              const productName = 'Cricket White Kit';
+              const productPrice = 1699;
+
+              // Call the addToCart function with the product details
+              addToCart(productName, productPrice);
+          });
+      }
+  });
+</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+        var loader = document.getElementById("preloader");
+      
+        // Add a delay of 1.5 seconds (1500 milliseconds) before hiding the preloader
+        setTimeout(function () {
+          loader.style.display = "none";
+        }, 1500);
+      </script>
+<footer>
+    <div class="footer-content" id="footer">
+        <h3>BEAST</h3>
+        <p>BEAST: Elevate Your Play. From inspiring apparel to tailored fitness programs, we empower you to conquer every moment, one rep at a time.</p>
+        <div class="contact">
+            Contact phone-number: +91 8789950364
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2021 BEAST. Designed by <span>BEAST</span></p>
+        </div>
+      </div>
+</footer>
+</body>
+</html>

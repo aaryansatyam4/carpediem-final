@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subscription Selection</title>
+<link rel="stylesheet" href="../css/mem.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="left">
+            <img src="../BEAST(1).png" alt="">
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="../php/carpediem.php" class="active">Home</a></li>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#service">Services</a></li>
+                <li><a href="../ConnectU/index.php">B.net</a></li>
+                <li><a href="#">Mem</a></li>
+            </ul>
+        </div>
+        
+        
+    </header>
+  
+    <div class="block" data-name="Clothing" data-price="1299" style="background-image: url('../pics/cloth.jpg');">Clothing - Rs 1299</div>
+    <div class="block" data-name="Dietician" data-price="3499" style="background-image: url('../pics/diet.jpg');">Dietician - Rs 3499</div>
+    <div class="block" data-name="Trainer" data-price="2799" style="background-image: url('../pics/images.jpg');">Trainer - Rs 2799</div>
+    <div class="block" data-name="Supplements" data-price="2799" style="background-image: url('../pics/sup.jpg');">Supplements - Rs 2799</div>
+    
+<h2>Total Cost: <span id="totalCost">0</span> Rs</h2>
+
+<script>
+    let selectedBlocks = [];
+    const discount = 0.1; // 10% discount
+
+    // Function to update total cost
+    function updateTotalCost() {
+        let total = selectedBlocks.reduce((acc, block) => acc + block.price, 0);
+        total = total - (total * discount); // Apply discount
+        document.getElementById('totalCost').textContent = total.toFixed(2);
+    }
+
+    // Function to handle block selection
+    function handleBlockSelection(event) {
+        const block = event.target;
+        const blockIndex = selectedBlocks.findIndex(selectedBlock => selectedBlock.name === block.getAttribute('data-name'));
+        
+        if (block.classList.contains('selected')) {
+            block.classList.remove('selected');
+            selectedBlocks.splice(blockIndex, 1);
+        } else {
+            block.classList.add('selected');
+            selectedBlocks.push({ name: block.getAttribute('data-name'), price: parseInt(block.getAttribute('data-price')) });
+        }
+        updateTotalCost();
+    }
+
+    // Add event listener to each block
+    document.querySelectorAll('.block').forEach(block => {
+        block.addEventListener('click', handleBlockSelection);
+    });
+</script>
+
+</body>
+</html>

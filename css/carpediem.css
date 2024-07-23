@@ -1,0 +1,453 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../pics/3078918.jpg');
+    background-color: rgb(27, 27, 27);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+.left {
+    display: inline-block;
+    position: absolute;
+    left: 34px;
+    top: 20px;
+    margin-top: -20px;
+   
+}
+
+.left img {
+    
+    width: 175px;
+}
+
+.mid {
+    align-items: center;
+    display: block;
+    width: 50%;
+    margin: 20px auto;
+}
+
+.navbar {
+    display: inline-block;
+    padding: 0;
+    width: 132%;
+    
+}
+
+.navbar li {
+    margin: 0 10px;
+    display: inline-block;
+    font-size: 15px;
+}
+
+.navbar li a {
+  align-items: center;
+    color: white;
+    text-decoration: none;
+    padding: 30px 20px;
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+    text-decoration: underline;
+    color: grey;
+}
+
+.right {
+    position: absolute;
+    right: 34px;
+    top: 20px;
+    display: flex;
+}
+
+.btn {
+    margin: 0 9px;
+    width: fit-content;
+    background-color: rgb(0, 165, 129);
+    color: white;
+    padding: 4px 14px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(138, 73, 255);
+}
+
+/* Section Styles */
+section h2 {
+    margin-top: 145px;
+}
+
+/* Footer Styles */
+footer {
+    margin-top: 30px;
+    background-color: black;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    max-height: 800px;
+    max-width: 1280px;
+    min-height: 600px;
+    min-width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: -150px; /* Adjust this value to control the space between the cards */
+}
+
+
+.createdby {
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    margin-top: 0px; 
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content p {
+    max-width: 900px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.footer-bottom {
+    background-color: black;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span {
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+.card1, .card2, .card3 {
+    width: 300px; /* Set a fixed width for all cards */
+    height: 400px; /* Set a fixed height for all cards */
+    margin: 20px; /* Add margin to create space between cards */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid rgba(225, 225, 225, 0.3);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.card1 img, .card2 img, .card3 img {
+    width: 140px;
+    border-radius: 50%;
+}
+
+.card1 h2, .card2 h2, .card3 h2 {
+    font-size: 20px;
+    margin: 10px auto;
+    max-width: 200px;
+    white-space: nowrap; /* Prevent line breaks within names */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Show ellipsis (...) for long names */
+}
+
+.card1 .link img, .card2 .link img, .card3 .link img {
+    width: 40px;
+    border-radius: 50%;
+    margin: 10px 5px;
+    transition: background 0.5s;
+}
+
+.card1 .link img:hover, .card2 .link img:hover, .card3 .link img:hover {
+    background: #ffffff;
+}
+
+
+
+.about {
+    display: flex; /* Use flexbox to control layout */
+    flex-direction: column; /* Make the children elements appear in a column */
+    text-align: right; /* Center text within the container */
+    margin-left: 25px;
+    font-size: 25px;
+    color: white;
+    margin-top: 850px;
+}
+
+.head {
+    margin-bottom: 20px; 
+    text-align: left; /* Center text within the container */
+    margin-left: 25px;
+}
+.content{
+    animation: backwards;
+    margin-top: 943px;
+    width: 100%;
+}
+
+.content img{
+    max-width: 570px;
+  float: right;
+  border: 3px solid white;
+  border-radius: 10px;
+  margin-right: 15px;
+  margin-top: 80px;
+}
+.text-box{
+    color: #fff;
+}
+.text-box h2{
+    float: left;
+    font-size: 76px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-left: 20px;
+    
+}
+.text-box p{
+  margin-top: 37px;
+    font-size: 34px;
+    width: 64%;
+    text-align: left;
+    margin-left: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+    
+}
+.rev p{
+    text-transform: uppercase;
+    background-image: linear-gradient(
+      -225deg,
+      #ff7700 0%,
+      #ffffff 29%,
+      #00ff73 67%,
+      #00ffc3 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 80px;
+    float: right;
+    margin-top: 248px;
+    margin-right: 3px;
+}
+@keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+  /* Add this CSS */
+.text-box.active {
+    opacity: 1; /* You can adjust this value for the desired reveal effect */
+    transform: translateY(0); /* You can adjust this value for the desired reveal effect */
+    transition: opacity 2.0s ease-in, transform 2.0s ease-in;
+}
+.custrev p{
+    align-self: center;
+    margin-top: 100px;
+    text-align: center;
+    font-size: 70px;
+    font-family: 'Josefin Sans', sans-serif;
+      
+}
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.containeer {
+  height: 95vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -200px;
+}
+.testimonial {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  padding: 50px 0;
+  overflow: hidden;
+}
+.testimonial .image {
+  height: 170px;
+  width: 170px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.testimonial .slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 30px;
+  height: 100%;
+  width: 100%;
+}
+.slide p {
+  text-align: center;
+  padding: 0 160px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+}
+.slide .quote-icon {
+  font-size: 30px;
+  color: #4070f4;
+}
+.slide .details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.details .name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+}
+.details .job {
+  font-size: 12px;
+  font-weight: 400;
+  color: #ffffff;
+}
+/* swiper button css */
+.nav-btn {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  transform: translateY(30px);
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+}
+.nav-btn:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.nav-btn::after,
+.nav-btn::before {
+  font-size: 20px;
+  color: #fff;
+}
+.swiper-pagination-bullet {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.swiper-pagination-bullet-active {
+  background-color: #4070f4;
+}
+@media screen and (max-width: 768px) {
+  .slide p {
+    padding: 0 20px;
+  }
+  .nav-btn {
+    display: none;
+  }
+}
+.preloader{
+    background: #000 url(../pics/1483.gif)no-repeat center center;
+    background-size:10% ;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+.service p{
+  font-size: 30px;
+  font-family: 'Mulish', sans-serif;
+  
+}
+
+/* CSS for arranging the images */
+.services {
+  text-align: center; /* Center the content */
+  margin-top: 130px;
+}
+
+.services .upper,
+.services .bottom {
+  display: flex;
+  justify-content: space-between; /* Distribute space evenly between the images */
+  align-items: center;
+  margin-top: 35px; /* Add some spacing between the rows */
+}
+
+.services .upper .left1,
+.services .upper .right1,
+.services .bottom .left2,
+.services .bottom .right2 {
+  flex: 2 0 calc(50% - 300px); /* Equal width for all four image containers with fixed margins */
+}
+
+.services img {
+  max-width: 100%; /* Ensure images don't exceed the container width */
+  height: 600px;
+  width: 550px;
+}
+.services .upper .left1 img:hover,
+.services .upper .right1 img:hover,
+.services .bottom .left2 img:hover,
+.services .bottom .right2 img:hover {
+  transform: scale(1.05); /* Magnify the image by 10% when hovering */
+  animation: magnify 0.3s ease;
+}
+
+@keyframes magnify {
+  0% {
+    transform: scale(1); 
+  }
+  100% {
+    transform: scale(1.05); 
+  }
+}
+
+
+
+

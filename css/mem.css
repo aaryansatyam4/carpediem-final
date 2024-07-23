@@ -1,0 +1,78 @@
+body{
+    background-image: url(../pics/people-working-out-indoors-together-with-dumbbells.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h2{
+    color: aliceblue;
+    background-color: black;
+    text-align: center;
+}
+.block {
+   margin: 10px;
+   margin-top: 150px;
+  padding: 96px 30px;
+  border: 2px solid #ccc;
+  width: 319px;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+    background-color: whitesmoke;
+}
+
+.block:hover {
+    transform: scale(1.05);
+    background-color: rgb(198, 198, 198);
+}
+
+.selected {
+    background-color: rgb(201, 255, 194);
+}
+.left {
+    display: inline-block;
+    position: absolute;
+    left: 34px;
+    top: 20px;
+    margin-top: -20px;
+   
+}
+
+.left img {
+    
+    width: 175px;
+}
+
+.mid {
+    align-items: center;
+    display: block;
+    width: 50%;
+    margin: 20px auto;
+}
+
+.navbar {
+    display: inline-block;
+    padding: 0;
+    width: 132%;
+    
+}
+
+.navbar li {
+    margin: 0 10px;
+    display: inline-block;
+    font-size: 15px;
+}
+
+.navbar li a {
+  align-items: center;
+    color: white;
+    text-decoration: none;
+    padding: 30px 20px;
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+    text-decoration: underline;
+    color: grey;
+}
+

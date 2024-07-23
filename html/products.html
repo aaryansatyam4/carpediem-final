@@ -1,0 +1,267 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL PRODUCTS - BEAST</title>
+    <link rel="stylesheet" href="../css/product.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,200&family=Roboto+Mono:wght@300&family=Sofia+Sans:wght@1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Josefin+Sans:ital,wght@1,200&family=Roboto+Mono:wght@300&family=Sofia+Sans:wght@1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Josefin+Sans:ital,wght@1,200&family=Roboto+Mono:wght@300&family=Sofia+Sans:wght@1&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <div class="preloader" id="preloader"></div>
+<div class="header">
+    <div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <img src="../pics/BEAST(1).png" alt="" width="175px">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../php/carpediem.php">HOME</a></li>
+                <li><a href="#featured">PRODUCT</a></li>
+                <li><a href="#footer">CONTACT</a></li>
+                <li>
+                    <div class="cart">
+                      <a href="../php/cart.php">
+                          <i class="bx bx-cart"></i> CART
+                          <span id="cartItemCount">0</span>
+                      </a>
+                  </div>
+                  </li>
+            </ul>
+        </nav>
+        <div class="cart">
+        
+    </div>
+    </div>
+    
+</div>
+</div>
+
+<!----- featured cateogsaries -------->
+
+
+
+<div class="small-container" data-aos="fade-right">
+    <div class="row row-2">
+        <h2>All Products</h2>
+        <select name="" id="" onchange="sortProducts()">
+            <option>Default Sorting</option>
+            <option>By price</option>
+            <option>By popularity</option>
+        </select>
+    </div>
+    <div class="row" id="featured">
+        <div class="cl-3" >
+            <a href="../html/soccerkit.html">
+            <img src="../pics/Soccer_Jersey_Kit_Mockup_Front.jpg" alt="">
+            <h4>Soccer Kit</h4>
+            <p> Rs 3500</p>
+        </a>
+
+        </div>
+        <div class="cl-3">
+            <a href="../html/cricket-jersey.html">
+            <img src="../pics/CRICKET 2.jpg" alt="">
+            <h4>Cricket Jersey</h4>
+            <p> Rs 1299 </p>
+        </a>
+        </div>
+        <div class="cl-3">
+            <a href="../html/athletic-kit.html">
+            <img src="../pics/jersey_front_longsleeve.jpg" alt="">
+            <h4>Athletic Kit</h4>
+            <p> Rs 4500</p>
+        </a>
+        </div>
+    </div>
+
+    <div class="row" data-aos="fade-right">
+        <div class="cl-3">
+            <a href="../html/shorts.html">
+            <img src="../pics/BASKETBALL_SHORT_FRONT_FULLMAX_FABRIC.jpg" alt="">
+            <h4>Shorts</h4>
+            <p> Rs 1200</p>
+        </a>
+        </div>
+        <div class="cl-3">
+            <a href="../html/cap.html">
+            <img src="../pics/377.jpg" alt="">
+            <h4>Cap</h4>
+            <p> Rs 1499 </p>
+        </a>
+        </div>
+        <div class="cl-3">
+            <a href="../html/white.html">
+            <img src="../pics/CRICKET 1.jpg" alt="">
+            <h4>Cricket White Kit</h4>
+            <p> Rs 1699</p>
+        </a>
+        </div>
+    </div>
+
+    
+
+
+</div>
+
+
+
+
+<!-- Before </body> tag in your common footer or included script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Function to update the cart item count display
+        function updateCartItemCount() {
+            // Get the cart items from localStorage
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Get the element where you want to display the item count
+            const cartItemCountElement = document.getElementById('cartItemCount');
+
+            // Calculate the total quantity of items in the cart
+            const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
+
+            // Update the displayed item count
+            cartItemCountElement.textContent = totalItems;
+        }
+
+        // Call updateCartItemCount on page load to ensure the correct initial count
+        updateCartItemCount();
+    });
+
+    // Function to handle adding an item to the cart
+    function addToCart(productName, productPrice) {
+        // Check if the cart data exists in localStorage
+        let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+        // Check if the product is already in the cart
+        const existingProductIndex = cartItems.findIndex(item => item.name === productName);
+
+        if (existingProductIndex !== -1) {
+            // If the product is already in the cart, update the quantity
+            cartItems[existingProductIndex].quantity += 1;
+        } else {
+            // If the product is not in the cart, add a new item
+            const cartItem = {
+                name: productName,
+                price: productPrice,
+                quantity: 1,
+            };
+            cartItems.push(cartItem);
+        }
+
+        // Save the updated cart data back to localStorage
+        localStorage.setItem('cart', JSON.stringify(cartItems));
+
+        // Update the cart item count display
+        updateCartItemCount();
+
+        // You can update the UI or perform other actions as needed
+        console.log('Item added to cart:', cartItems);
+    }
+</script>
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script>
+        var loader = document.getElementById("preloader");
+      
+        // Add a delay of 1.5 seconds (1500 milliseconds) before hiding the preloader
+        setTimeout(function () {
+          loader.style.display = "none";
+        }, 1500);
+      </script>
+      <script>
+        function sortProducts() {
+            var select = document.querySelector('select');
+            var selectedOption = select.options[select.selectedIndex].value;
+    
+            var products = document.querySelectorAll('.cl-3');
+            var productsArray = Array.from(products);
+    
+            if (selectedOption === 'By price') {
+                sortByPrice(productsArray);
+            } else if (selectedOption === 'By popularity') {
+                sortByPopularity(productsArray);
+            }
+    
+            // Add similar conditions for other sorting options if needed
+        }
+    
+        function sortByPrice(productsArray) {
+            productsArray.sort(function(a, b) {
+                var priceA = parseFloat(a.querySelector('p').innerText.split(' ')[1]);
+                var priceB = parseFloat(b.querySelector('p').innerText.split(' ')[1]);
+    
+                return priceA - priceB;
+            });
+    
+            productsArray.forEach(function(product) {
+                product.parentElement.removeChild(product);
+            });
+    
+            var container = document.getElementById('featured');
+            productsArray.forEach(function(product) {
+                container.appendChild(product);
+            });
+        }
+    
+        function sortByPopularity(productsArray) {
+            var popularityOrder = ['Cricket White Kit', 'Cricket Jersey', 'Soccer Kit', 'Athletic Kit', 'Shorts', 'Cap'];
+    
+            productsArray.sort(function(a, b) {
+                var productNameA = a.querySelector('h4').innerText;
+                var productNameB = b.querySelector('h4').innerText;
+    
+                var indexA = popularityOrder.indexOf(productNameA);
+                var indexB = popularityOrder.indexOf(productNameB);
+    
+                return indexA - indexB;
+            });
+    
+            productsArray.forEach(function(product) {
+                product.parentElement.removeChild(product);
+            });
+    
+            var container = document.getElementById('featured');
+            productsArray.forEach(function(product) {
+                container.appendChild(product);
+            });
+        }
+    </script>
+    
+<footer>
+    <div class="footer-content" id="footer">
+        <h3>BEAST</h3>
+        <p>BEAST: Elevate Your Play. From inspiring apparel to tailored fitness programs, we empower you to conquer every moment, one rep at a time.</p>
+        <div class="contact">
+            Contact phone-number: +91 8789950364
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2024 BEAST. Designed by <span>BEAST</span></p>
+        </div>
+      </div>
+</footer>
+</body>
+</html>

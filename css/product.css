@@ -1,0 +1,354 @@
+
+body{
+    background-color: rgb(6, 5, 5);
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+nav{
+    flex:1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+    color: #555;
+}
+p{
+    color: #555;
+}
+container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-2 {
+    text-align: right; /* Align text to the right side */
+    flex: 1; /* Expand to take available space */
+    padding: 20px; /* Add some padding for spacing */
+    border-radius: 10px; /* Add rounded corners for style */
+    margin-right: 10px; /* Add some margin to separate from the other content */
+    margin-top: 230px;
+    margin-right: 300px;
+}
+.col-2 h1{
+    font-size: 44px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.col-2 p{
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.btn{
+    display: inline-block;
+  background: #ff00008b;
+  color: #fff;
+  padding: 7px 30px;
+  margin: -9px 0;
+  border-radius: 30px;
+  transition: background 0.5s;
+}
+.btn:hover{
+    background: #010101;
+}
+.categories{
+    margin: 70px 0;
+    margin-top: 534px;
+}
+.col-3{
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+.col-3 img{
+    width:110%;
+    height: auto;
+    
+}
+.small-container{
+    max-width: 1400px;
+    margin: auto;
+    padding-left:25px;
+    padding-right: 25px;
+}
+.categories p{
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.small-container h2{
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.cl-3{
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+.cl-3 img{
+    width:98%;
+    height: 380px;
+    margin: 10px 10px;
+}
+.cl-3 h4{
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: whitesmoke;
+    margin-top: 0px;
+}
+.cl-3 p{
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: whitesmoke;
+    margin-top:-28px;
+
+}
+.cl-3 img:hover{
+    transform: scale(1.05); /* Magnify the image by 10% when hovering */
+    animation: magnify 0.3s ease;
+  }
+  
+  @keyframes magnify {
+    0% {
+      transform: scale(1); 
+    }
+    100% {
+      transform: scale(1.05); 
+    }
+  }
+  .cl-2 {
+    text-align: left; /* Align text to the right side */
+    flex: 1; /* Expand to take available space */
+    padding: 20px; /* Add some padding for spacing */
+    border-radius: 10px; /* Add rounded corners for style */
+    margin-right: 10px; /* Add some margin to separate from the other content */
+    margin-top: 230px;
+    margin-right: 200px;
+    color: whitesmoke;
+}
+.cl-2 h1{
+    color: whitesmoke;
+    font-size: 44px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.cl-2 p{
+    color: whitesmoke;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.cl-2 small{
+    font-size: 20px;
+    color: whitesmoke;
+
+}
+.offer{
+    background: radial-gradient(#460000,#000000);
+    margin-top:80px ;
+    padding: 30px 0;
+}  
+.cl-2 .offer-img{
+    padding: 50px;
+}
+footer {
+    margin-top: 30px;
+    background-color: black;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3 {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content p {
+    color: white;
+    max-width: 900px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.footer-bottom {
+    background-color: black;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: white;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span {
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+.preloader{
+    background: #000 url(1483.gif)no-repeat center center;
+    background-size:10% ;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+}
+
+
+.row-2{
+    justify-content: space-between;
+    margin: 100px auto 50px;
+}
+select{
+    border: 1px solid #323232;
+    padding: 5px;
+}
+select:focus{
+    outline: none;
+}
+.col-2 img{
+    width:auto;
+    height: 500px;
+    margin: 10px 10px;
+
+}
+
+
+
+
+.single-product{
+    margin-top: -200px;
+}
+.single-product .cl-2 img{
+    padding: 0;
+
+}
+.single-product .cl-2 {
+    padding: -20px;
+}
+.single-product h4{
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+.single-product select{
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+
+}
+.single-product input{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-right: 10px;
+    border: 1px solid rgb(85, 85, 85);
+}
+input:focus{
+    outline: none;
+}
+.row p{
+    color: whitesmoke;
+}
+
+.small-container table{
+    color: white;
+}
+
+
+.cart-page{
+    margin: 80px auto;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.small-container table p{
+    color: white;
+}
+.cart-info{
+    display:flex;
+    flex-wrap: wrap;
+
+}
+th{
+    text-align: left;
+    padding: 5px;
+    color: #fff;
+    background: #737476;
+    font-weight: normal;
+
+}
+td{
+    padding: 10px 5px;
+
+}
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+td a{
+    
+font-size: 12px;
+}
+td img{
+    width: 80px;
+    height: 80px;
+    margin-right:10px ;
+}
+
+.total h3{
+    color: gray;
+    margin-left: 136px;
+    padding-right: 500px;
+}
+
+.total p{
+    color: grey;
+    padding-left: 500px;
+    margin-top: -37px;
+
+}

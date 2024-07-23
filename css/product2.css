@@ -1,0 +1,29 @@
+.tp {
+    display: flex;
+    justify-content: flex-end;
+  }
+.tp table {
+    border-top: 10px solid #737476;
+    width: 100%;
+    max-width: 400px;
+  }
+  td:last-child{
+    text-align: right;
+  }
+  th:last-child{
+    text-align: right;
+  }
+  h3 {
+    color: gray;
+  }
+  .buy button{
+    margin-right: 0px;
+    padding: 10px 97px;
+
+  }
+
+  .address {
+    padding: 5px 162px;
+    margin-left: -19px;
+    margin-top: 154px;
+  }

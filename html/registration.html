@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> BEAST SIGNUP PAGE </title>
+    <link rel="stylesheet" href="/Users/aryan/Desktop/COLLEGE/dbw project/css/registration.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <header class="header">
+    <a href="../php/carpediem.php">
+      <div class="left">
+        <img src="../PICS/BEAST(1).png" alt="carpediem">
+      </div>
+    </a>
+    
+    <div class="mid">
+      <ul class="navbar">
+          <li><a href="../html/project.html" class="active">Home</a></li>
+          <li><a href="../html/about.html">About us</a></li>
+          <li><a href="../html/FitnessCalculator.html">Fitness Calculator</a></li>
+          <li><a href="../html/contactus.html">Review us</a></li>
+      </ul>
+
+  </div>
+  <div class="right">
+      <button class="btn">signup</button>
+      <button class="btn">Instagram</button>
+
+  </div>
+  </header>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form action="../php/connect.php " method="post">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" placeholder="Enter your name" name="fullname" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" placeholder="Enter your username" name="username" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" placeholder="Enter your email" name="email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="tel" placeholder="Enter your number" name="phone"  >
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" placeholder="Enter your password" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" placeholder="Confirm your password" required>
+          </div>
+        </div>
+        <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1" value="Male">
+          <input type="radio" name="gender" id="dot-2" value="Female">
+          <input type="radio" name="gender" id="dot-3" value="prefer not to say">
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Male</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Female</span>
+          </label>
+          <label for="dot-3">
+            <span class="dot three"></span>
+            <span class="gender">Prefer not to say</span>
+            </label>
+          </div>
+        </div>
+        <div class="button">
+          
+          <input type="submit" value="Register">
+        
+        </div>
+      </form>
+<div class="link">
+    Already signed up? <a href="../html/login.html">Login Now</a>
+</div>
+    </div>
+  </div>
+
+</body>
+</html>
